@@ -274,6 +274,7 @@ export const AppDiv = styled.div`
 
     .imagens {
       height: 180px;
+      margin-bottom: 20px;
     }
 
     .imagens :last-child {
