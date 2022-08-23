@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { AppDiv } from "./styles";
 // icons
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
@@ -9,6 +9,9 @@ import { Contato } from "./components/contato/contato";
 import { Projetos } from "./components/projetos/projetos";
 import { Sobre } from "./components/sobre/sobre";
 // images
+import { ContactContext } from "./context/contact";
+import { ModuleContext } from "./context/modules";
+import { SobreContext } from "./context/sobre";
 import cssicon from "./images/css.svg";
 import djicon from "./images/django.svg";
 import dockericon from "./images/docker.svg";
@@ -21,26 +24,9 @@ import pythonicon from "./images/python.svg";
 import reacticon from "./images/react.svg";
 
 function App() {
-  const [modulo, setModulo] = useState("home");
-
-  const handlePage = (page) => {
-    setModulo(page);
-  };
-
-  const empresas = [
-    {
-      img: "https://media-exp2.licdn.com/dms/image/C4E0BAQH8smZMfETo8A/company-logo_100_100/0/1655211431730?e=1663804800&v=beta&t=2wg7Wt9iw_6OcQYFlyngMpuIpE5M_FfMDnpZaIkaU6w",
-      sub: "Vivo (Telefônica Brasil)",
-      text: "out de 2016 - jan de 2018 · 1 ano 4 mesesout de 2016 - jan de 2018 · 1 ano 4 meses Curitiba, Paraná, Brasil",
-    },
-    {
-      img: "https://media-exp2.licdn.com/dms/image/C510BAQHCIWoDxQI8ZQ/company-logo_100_100/0/1519891915490?e=1663804800&v=beta&t=KXhYxzuuJWNbxPk5qu6F4f9bYzgiHKjgK6qA2HDwEpc",
-      sub: "JL Informatica",
-      text: "set de 2011 - dez de 2015 · 4 anos 4 mesesset de 2011 - dez de 2015 · 4 anos 4 meses Goiânia, Goiás, Brasil",
-    },
-  ];
-
-  const tecs = [];
+  const { modulo, handlePage } = useContext(ModuleContext);
+  const { sobre } = useContext(SobreContext);
+  const { contato } = useContext(ContactContext);
 
   return (
     <AppDiv modulo={modulo}>
@@ -65,10 +51,10 @@ function App() {
           <p className="font2">Informaçoes de contato</p>
         </div>
         <div className="links">
-          <button className="sobre" onClick={() => setModulo("sobre")}>
+          <button className="sobre" onClick={() => handlePage("sobre")}>
             Mais sobre mim...
           </button>
-          <button className="contato" onClick={() => setModulo("contato")}>
+          <button className="contato" onClick={() => handlePage("contato")}>
             "Contatos Hamart"
           </button>
           <div className="descr">
@@ -105,10 +91,10 @@ function App() {
         </div>
       </section>
 
-      <Cards title={"Projetos"} list={tecs} />
-      <Cards title={"Sobre"} list={empresas} />
-      <Cards title={"Contato"} list={empresas} />
-      <Cards title={"Formação"} list={empresas} />
+      <Cards title={"Projetos"} list={sobre} />
+      <Cards title={"Sobre"} list={sobre} />
+      <Cards title={"Contato"} list={contato} />
+      <Cards title={"Forcação"} list={sobre} />
 
       <footer>
         <h2>Hamart Rony</h2>

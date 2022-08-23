@@ -13,7 +13,7 @@ export const CardsDiv = styled.div`
   border: 1px solid #cccccc;
 
   h2 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 900;
     margin-left: 20px;
   }
@@ -21,13 +21,13 @@ export const CardsDiv = styled.div`
   h3 {
     font-size: 16px;
     font-weight: 600;
-    margin-left: 50px;
+    margin-left: 75px;
   }
 
   p {
-    font-size: 16px;
+    font-size: 13px;
     color: black;
-    margin-left: 50px;
+    margin-left: 75px;
   }
 
   .item {
@@ -37,8 +37,8 @@ export const CardsDiv = styled.div`
 
   img {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
   }
 
   @media only screen and (min-width: 770px) {

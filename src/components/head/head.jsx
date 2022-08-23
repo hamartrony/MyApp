@@ -3,9 +3,12 @@ import { AiFillHome } from "react-icons/ai";
 import { BsFillBagDashFill } from "react-icons/bs";
 import { FaUserAlt } from "react-icons/fa";
 import { BsFillChatRightDotsFill } from "react-icons/bs";
+import { useContext } from "react";
+import { ModuleContext } from "../../context/modules";
 
-export const Head = ({ handlePage, modulo }) => {
+export const Head = () => {
   const hamart = "<h1>Hamart Rony</h1>";
+  const { modulo, handlePage } = useContext(ModuleContext);
 
   return (
     <HeadDiv modulo={modulo}>

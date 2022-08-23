@@ -305,7 +305,7 @@ export const AppDiv = styled.div`
     }
 
     .tec-icons img {
-      width: 2em;
+      width: 3em;
     }
   }
 `;
