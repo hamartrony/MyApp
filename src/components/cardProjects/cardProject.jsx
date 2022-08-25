@@ -1,15 +1,9 @@
-import { useState } from "react";
-import { CardsProjDiv, ContatoDiv, ProjetosDiv } from "./style";
-import insta from "../../images/icons8-instagram-96.png";
-import linkd from "../../images/linkedin.png";
-import git from "../../images/git.png";
-import mail from "../../images/e-mail.png";
-import ButtonClose from "../buttonClose/button-close";
-import nukenzie from "../../images/projetos/nukenzie.png";
-import photo from "../../images/projetos/Kenzie-photo1.png";
-import burguer from "../../images/projetos/bruguer-kenzie.png";
+import { CardsProjDiv } from "./style";
+
 
 export const CardProjects = ({ handleSaiba, ...rest }) => {
+  
+
   return (
     <CardsProjDiv>
       <div className="attr">

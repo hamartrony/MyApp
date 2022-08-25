@@ -2,16 +2,24 @@ import styled from "styled-components";
 
 export const ContatoDiv = styled.div`
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 1800px;
   display: flex;
   justify-content: center;
+  align-self: flex-start;
+  background-color: ${(props) =>
+    props.modulo !== "home" && "rgba(0, 0, 0, 0.5)"};
+  backdrop-filter: ${(props) => props.modulo !== "home" && "blur(2px)"};
+  -webkit-backdrop-filter: ${(props) =>
+    props.modulo !== "home" && "blur(5.5px)"};
 
-  .all {
-    width: 98%;
-    height: 400px;
+  z-index: 1;
+
+  section {
+    width: 97%;
+    height: auto;
     position: absolute;
-    margin-top: 5em;
+    margin-top: 100px;
     z-index: 1;
     flex-wrap: nowrap;
     background: #fff;
@@ -23,17 +31,23 @@ export const ContatoDiv = styled.div`
 
   .text {
     width: 100%;
-    height: 15%;
+    height: 50px;
     margin: 0;
-    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-bottom: 1px solid #666666;
   }
 
-  .tittle {
+  h2 {
     font-size: 1.5em;
-    margin-bottom: 10px;
-    margin-left: 1em;
+    font-weight: 900;
     color: #000;
+  }
+
+  .tittle {
+    font-size: 15px;
+    padding: 15px;
   }
 
   .icons {
@@ -82,28 +96,29 @@ export const ContatoDiv = styled.div`
     filter: brightness(130%);
   }
 
+  .buttonClose {
+    align-self: flex-end;
+  }
+
   @media only screen and (min-width: 800px) {
-    /* padding: 0; */
     display: flex;
     justify-content: center;
-    width: 100vw;
-    height: 1000vh;
+    width: 100%;
+    height: 1150px;
     background-color: ${(props) =>
       props.modulo !== "home" && "rgba(0, 0, 0, 0.5)"};
     backdrop-filter: ${(props) => props.modulo !== "home" && "blur(2px)"};
     -webkit-backdrop-filter: ${(props) =>
       props.modulo !== "home" && "blur(5.5px)"};
 
-    z-index: 1;
-
-    .all {
+    section {
       padding: 0;
       flex-direction: column;
       align-items: flex-start;
-      /* justify-content: center; */
-      width: 50%;
+      width: 500px;
       height: 30em;
       max-width: 800px;
+      position: inherit;
     }
 
     .icons {

@@ -5,12 +5,16 @@ import { FaUserAlt } from "react-icons/fa";
 import { BsFillChatRightDotsFill } from "react-icons/bs";
 import { useContext } from "react";
 import { ModuleContext } from "../../context/modules";
+import { Contato } from "../contato/contato";
+import { Projetos } from "../projetos/projetos";
+import { Sobre } from "../sobre/sobre";
 
 export const Head = () => {
   const hamart = "<h1>Hamart Rony</h1>";
   const { modulo, handlePage } = useContext(ModuleContext);
 
   return (
+    <>
     <HeadDiv modulo={modulo}>
       <div className="head">
         <div className="tittle">
@@ -45,5 +49,9 @@ export const Head = () => {
         </button>
       </div>
     </HeadDiv>
+    {modulo === "contato" && <Contato handlePage={handlePage} />}
+    {modulo === "projetos" && <Projetos handlePage={handlePage} />}
+    {modulo === "sobre" && <Sobre handlePage={handlePage} />}
+    </>
   );
 };

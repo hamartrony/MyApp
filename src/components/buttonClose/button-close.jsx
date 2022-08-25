@@ -1,9 +1,13 @@
+import { useContext } from "react";
+import { ModuleContext } from "../../context/modules";
 import { ButtonClose } from "./style";
 
-function Close({ handlePage, page }) {
+function Close() {
+  const { handlePage } = useContext(ModuleContext);
+
   return (
-    <ButtonClose>
-      <button onClick={() => handlePage("home")}>Voltar</button>
+    <ButtonClose className="buttonClose">
+      <button onClick={() => handlePage("home")}>Home</button>
     </ButtonClose>
   );
 }

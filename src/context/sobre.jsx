@@ -1,9 +1,9 @@
 import {
     createContext
   } from "react";
-  import music from "../images/music.png";
-  import code from "../images/code.png";
-  import drink from "../images/drink.png";
+  import music from "../images/icons/music.png";
+  import code from "../images/icons/code.png";
+  import drink from "../images/icons/drink.png";
 
   export const SobreContext = createContext();
   

@@ -1,18 +1,17 @@
 import { useState } from "react";
 import { ContatoDiv } from "./style";
-import insta from "../../images/icons8-instagram-96.png";
-import linkd from "../../images/linkedin.png";
-import git from "../../images/git.png";
-import mail from "../../images/e-mail.png";
+import insta from "../../images/icons/icons8-instagram-96.png";
+import linkd from "../../images/icons/linkedin.png";
+import git from "../../images/icons/git.png";
+import mail from "../../images/icons/e-mail.png";
 import ButtonClose from "../buttonClose/button-close";
 
 export const Contato = ({ handleClick, color, modulo, handlePage }) => {
   return (
     <ContatoDiv>
-      <div className="all">
+      <section>
         <div className="text">
-          {/* <ButtonClose handlePage={handlePage} /> */}
-          <p className="tittle">Pode me encontrar aqui!</p>
+          <h2 >Pode me encontrar aqui!</h2>
         </div>
 
         <div className="icons">
@@ -60,7 +59,8 @@ export const Contato = ({ handleClick, color, modulo, handlePage }) => {
             </a>
           </div>
         </div>
-      </div>
+        <ButtonClose/>
+      </section>
     </ContatoDiv>
   );
 };

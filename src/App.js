@@ -5,37 +5,34 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { MdMarkEmailRead } from "react-icons/md";
 // components
 import Cards from "./components/cards";
-import { Contato } from "./components/contato/contato";
-import { Projetos } from "./components/projetos/projetos";
-import { Sobre } from "./components/sobre/sobre";
 // images
+import ProjHome from "./components/projhome";
 import { ContactContext } from "./context/contact";
+import { FormacaoContext } from "./context/formação";
 import { ModuleContext } from "./context/modules";
+import { ProjectContext } from "./context/projetos";
 import { SobreContext } from "./context/sobre";
-import cssicon from "./images/css.svg";
-import djicon from "./images/django.svg";
-import dockericon from "./images/docker.svg";
-import wallpaper from "./images/fundo.jpeg";
-import hamart from "./images/hamartPerfil.png";
-import htmlicon from "./images/html5.svg";
-import jsicon from "./images/nodejs.svg";
-import psqlicon from "./images/pgsql.svg";
-import pythonicon from "./images/python.svg";
-import reacticon from "./images/react.svg";
+import cssicon from "./images/icons/css.svg";
+import djicon from "./images/icons/django.svg";
+import dockericon from "./images/icons/docker.svg";
+import wallpaper from "./images/icons/fundo.jpeg";
+import hamart from "./images/icons/hamartPerfil.png";
+import htmlicon from "./images/icons/html5.svg";
+import jsicon from "./images/icons/nodejs.svg";
+import psqlicon from "./images/icons/pgsql.svg";
+import pythonicon from "./images/icons/python.svg";
+import reacticon from "./images/icons/react.svg";
 
 function App() {
   const { modulo, handlePage } = useContext(ModuleContext);
   const { sobre } = useContext(SobreContext);
   const { contato } = useContext(ContactContext);
+  const { formacao } = useContext(FormacaoContext);
+  const { projetos } = useContext(ProjectContext);
 
   return (
     <AppDiv modulo={modulo}>
-      {/* rotas para Modal */}
-      {modulo === "contato" && <Contato handlePage={handlePage} />}
-      {modulo === "projetos" && <Projetos handlePage={handlePage} />}
-      {modulo === "sobre" && <Sobre handlePage={handlePage} />}
       {modulo === "home" && <></>}
-
       <section>
         <div className="imagens">
           <img src={hamart} alt="hamart imagem" className="profile-image"></img>
@@ -91,11 +88,10 @@ function App() {
         </div>
       </section>
 
-      <Cards title={"Projetos"} list={sobre} />
-      <Cards title={"Sobre"} list={sobre} />
-      <Cards title={"Contato"} list={contato} />
-      <Cards title={"Forcação"} list={sobre} />
-
+      <ProjHome tittleStr={"Projetos"} list={projetos} />
+      <Cards tittleStr={"Sobre"} list={sobre} />
+      <Cards tittleStr={"Contato"} list={contato} />
+      <Cards tittleStr={"Formação"} list={formacao} />
       <footer>
         <h2>Hamart Rony</h2>
         <p>Desenvolvimento Web</p>

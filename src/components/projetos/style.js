@@ -2,16 +2,22 @@ import styled from "styled-components";
 
 export const ProjetosDiv = styled.div`
   position: absolute;
-  width: 100vw;
-  /* height: 100vh; */
+  width: 100%;
+  height: 1800px;
   display: flex;
   justify-content: center;
+  align-self: flex-start;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: ${(props) => props.modulo !== "home" && "blur(2px)"};
+  -webkit-backdrop-filter: ${(props) =>
+    props.modulo !== "home" && "blur(5.5px)"};
+  z-index: 1;
 
-  .all {
-    width: 98%;
+  section {
+    width: 97%;
     height: auto;
     position: absolute;
-    margin-top: 4.8em;
+    margin-top: 100px;
     z-index: 1;
     flex-wrap: nowrap;
     background: #fff;
@@ -21,66 +27,64 @@ export const ProjetosDiv = styled.div`
     flex-direction: column;
   }
 
-  .text {
-    width: 100%;
-    height: 2.5em;
+  h2 {
+    width: 95%;
+    height: 35px;
     margin-left: 0;
-    align-items: center;
+    font-size: 20px;
+    font-weight: 900;
     border-bottom: 1px solid #666666;
+    padding: 10px;
   }
 
-  .tittle {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-
-    color: #000;
+  h3 {
+    font-weight: 900;
   }
 
-  .icons {
-    height: 370px;
+  .cards {
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     overflow-y: scroll;
+    padding-bottom: 30px;
   }
-
-  /* .attr p {
-    font-size: 1em;
-    color: #000;
-    font-weight: 400;
-  } */
-
-  /* .txt2 {
-    font-weight: 600;
-    color: #0b66c2;
-    font-size: 1.2em;
-    margin-left: 0.6em;
-    filter: brightness(70%);
-    text-decoration: none;
-  }
-
-  .txt2:hover {
-    font-weight: 900;
-    filter: brightness(130%);
-  }
-
-  .attr button:hover {
-    filter: brightness(130%);
-  } */
 
   .dialog {
     background-color: #fff;
-    margin-top: -6em;
+    margin-top: 0;
     width: 100%;
-    height: 292px;
+    height: auto;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     display: ${(props) => (props.num !== 9 ? "inherit" : "none")};
-    /* display: in; */
+    animation: down-break 2s normal;
+    overflow: hidden;
     align-items: center;
-    z-index: 2;
+    padding-bottom: 30px;
+    line-height: 20px;
+  }
+
+  .tecs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  .tecs img {
+    height: 50px;
+    padding: 5px;
+  }
+
+  @keyframes down-break {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 200px;
+    }
   }
 
   .dialog p {
@@ -121,73 +125,71 @@ export const ProjetosDiv = styled.div`
     filter: brightness(100%);
   }
 
-  @media only screen and (min-width: 800px) {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    height: 150vh;
-    background-color: #f3f2ef;
-    /* background-color: ${(props) =>
+  .buttonClose {
+    margin-top: 20px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    width: 100%;
+    height: 1500px;
+    background-color: ${(props) =>
       props.modulo !== "home" && "rgba(0, 0, 0, 0.5)"};
     backdrop-filter: ${(props) => props.modulo !== "home" && "blur(2px)"};
     -webkit-backdrop-filter: ${(props) =>
-      props.modulo !== "home" && "blur(5.5px)"}; */
+      props.modulo !== "home" && "blur(5.5px)"};
 
-    z-index: 1;
-
-    .all {
+    section {
       padding: 0;
-      flex-direction: column;
+      max-width: 1000px;
+      display: flex;
+      flex-direction: row;
       align-items: flex-start;
       flex-direction: row;
-      /* justify-content: center; */
-      width: 100%;
-      height: 85vh;
-      max-width: 1000px;
+      margin-top: 70px;
     }
 
-    .all > .text {
-      position: absolute;
+    h2 {
+      position: fixed;
+    }
+
+    .cards {
+      width: 60%;
+      margin-top: 60px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      overflow-y: unset;
     }
 
     .dialog {
       background-color: #fff;
-      margin-top: 6em;
-      width: 80%;
+      margin-top: 65px;
+      width: 40%;
       height: 80%;
       border-radius: 10px;
       display: flex;
       flex-direction: column;
-      /* display: ${(props) => (props.num !== 9 ? "inherit" : "none")}; */
       display: inherit;
       align-items: center;
-      z-index: 2;
+      animation: down-break 2s normal;
+    }
+
+    .dialog p {
+      text-align: justify;
+    }
+
+    @keyframes down-break {
+      from {
+        height: 0px;
+      }
+      to {
+        height: 200px;
+      }
     }
 
     .dialog .textmerda {
       width: 80%;
       font-size: 1em;
-    }
-
-    .icons {
-      height: 600px;
-      margin-top: 5em;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      /* justify-content: space-between; */
-      width: 100%;
-      overflow-y: inherit;
-    }
-  }
-
-  @media only screen and (min-width: 1900px) {
-    max-width: 1500px;
-    height: 100vh;
-
-    .all {
-      max-width: 1500px;
-      height: 100vh;
     }
   }
 `;
