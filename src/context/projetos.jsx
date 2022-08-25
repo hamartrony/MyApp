@@ -80,7 +80,7 @@ import {
             <>
               <p>Um trabalho em equipe, conectado a uma API Node, com o Front desenvolvido em React, Material UI e Typescript.</p>
               <p>O desafio de uso de uma nova tecnologia, e a surpresa ao descobrir um mundo de possibilidades que facilitam o desenvolvimento.</p>
-              ,
+              
             </>,
               tecs: [htmlicon, cssicon, jsicon, dockericon, psqlicon],
             },
