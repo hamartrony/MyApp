@@ -17,12 +17,12 @@ import {
         { id: 1,
           img: code,
           sub: "Trabalho",
-          text: "Fazer algo novo todo dia. Uma profissao motivadora e instigante.",
+          text: "Fazer algo novo todo dia. Uma profissão motivadora e instigante.",
         },
         { id: 2,
             img: drink,
             sub: "Combustivel",
-            text: "Sempre quente, e de preferencia acompanhado de um pão de queijo.",
+            text: "Sempre quente, e de preferência acompanhado de um pão de queijo.",
           },
       ];
     

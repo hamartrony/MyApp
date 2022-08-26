@@ -32,7 +32,7 @@ import {
         { id: 2,
             img: email,
             sub: emailLink,
-            text: "Me encaminhe um e-mail, estou sempre de olho no spamicons/! ",
+            text: "Me encaminhe um e-mail, estou sempre de olho no spam! ",
           },
       ];
     

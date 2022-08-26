@@ -15,7 +15,7 @@ export const SobreDiv = styled.div`
 
   section {
     width: 97%;
-    height: 400px;
+    height: 450px;
     position: absolute;
     margin-top: 100px;
     z-index: 1;

@@ -22,7 +22,7 @@ export const Sobre = () => {
           o mundo da tecnologia, onde atuei por 5 anos como suporte técnico.
         </p>
         <p>Cursando Análise de Sistema e Desenvolvimento Web,
-          descobri um mundo de possibilidades entre varias tecnologias envolvidas no desenvolvimento
+          descobri um mundo de possibilidades entre várias tecnologias envolvidas no desenvolvimento
           com Javascript e Python. 
         </p>
         <p>
