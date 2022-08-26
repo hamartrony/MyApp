@@ -70,7 +70,7 @@ import {
               tecs: [htmlicon, cssicon, jsicon],
             },
             {
-              id: 5,
+              id: 4,
               link: "https://kenziefood-umber.vercel.app/",
               git: "https://github.com/hamartrony/kenziefood",
               img: foodIm,
@@ -85,7 +85,7 @@ import {
                 tecs: [htmlicon, cssicon, jsicon],
               },
           {
-            id: 4,
+            id: 5,
             link: "https://motorshop-peach.vercel.app",
             git: "https://github.com/hamartrony/react-mui",
             img: motorIm,
