@@ -86,7 +86,6 @@ export const CardsDiv = styled.div`
     height: 500px;
     justify-content: flex-start;
     overflow: scroll;
-    padding-top: 10px;
 
     ::-webkit-scrollbar {
       width: 5px;
@@ -115,11 +114,20 @@ export const CardsDiv = styled.div`
 
     .list {
       height: 400px;
+      margin-top: 50px;
+    }
+
+    .tittle {
+      width: 300px;
+      height: 50px;
+      background-color: #fff;
+      position: absolute;
+      z-index: 1;
     }
 
     h2 {
       font-size: 20px;
-      margin-top: 0;
+      margin-top: 20px;
     }
     a {
       text-decoration: none;

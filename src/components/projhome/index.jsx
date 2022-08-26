@@ -8,7 +8,10 @@ function ProjHome({ tittleStr, list }) {
 
   return (
     <CardsDiv tittleStr={tittleStr}>
+      <div className="tittle">
+
       <h2>{tittleStr}</h2>
+      </div>
        <div className="list">
         {list.map((item) => (
           <div className="item" key={item.id}>
