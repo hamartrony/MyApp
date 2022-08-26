@@ -79,7 +79,7 @@ import {
               p: "Trabalho em grupo, utilizando HTML, CSS e Javascript.",
               dialog:
               <>
-                <p>Um trabalho em equipe, conectado a uma API (disponobilizada pela equipe de ensino), com o Front desenvolvido em React, Material UI e Typescript.</p>
+                <p>Um trabalho em equipe, conectado a uma API (disponobilizada pela equipe de ensino), utilizando HTML, CSS e JS!</p>
                 <p>Mais um projeto utilizando o modelo de e-commerce, fazendo uso do LocalStorage para armazenamento de itens no carrinho, busca e filtros. </p>              
               </>,
                 tecs: [htmlicon, cssicon, jsicon],
