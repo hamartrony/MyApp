@@ -85,6 +85,21 @@ export const CardsDiv = styled.div`
     width: 32%;
     height: 500px;
     justify-content: flex-start;
+    overflow: scroll;
+    padding-top: 10px;
+
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: blue;
+      border-radius: 20px;
+    }
 
     .item {
       width: 40%;
@@ -104,6 +119,7 @@ export const CardsDiv = styled.div`
 
     h2 {
       font-size: 20px;
+      margin-top: 0;
     }
     a {
       text-decoration: none;

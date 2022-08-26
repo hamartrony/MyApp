@@ -13,6 +13,7 @@ import {
   import psqlicon from "../images/icons/pgsql.svg";
   import pythonicon from "../images/icons/python.svg";
   import reacticon from "../images/icons/react.svg";
+  import foodIm from "../images/projetos/kenzie-food.png"
 
   export const ProjectContext = createContext();
   
@@ -68,6 +69,21 @@ import {
               </>,
               tecs: [htmlicon, cssicon, jsicon],
             },
+            {
+              id: 5,
+              link: "https://kenziefood-umber.vercel.app/",
+              git: "https://github.com/hamartrony/kenziefood",
+              img: foodIm,
+              alt: "kenzie food",
+              a: "KenzieFood",
+              p: "Trabalho em grupo, utilizando HTML, CSS e Javascript.",
+              dialog:
+              <>
+                <p>Um trabalho em equipe, conectado a uma API (disponobilizada pela equipe de ensino), com o Front desenvolvido em React, Material UI e Typescript.</p>
+                <p>Mais um projeto utilizando o modelo de e-commerce, fazendo uso do LocalStorage para armazenamento de itens no carrinho, busca e filtros. </p>              
+              </>,
+                tecs: [htmlicon, cssicon, jsicon],
+              },
           {
             id: 4,
             link: "https://motorshop-peach.vercel.app",
@@ -79,11 +95,12 @@ import {
             dialog:
             <>
               <p>Um trabalho em equipe, conectado a uma API Node, com o Front desenvolvido em React, Material UI e Typescript.</p>
-              <p>O desafio de uso de uma nova tecnologia, e a surpresa ao descobrir um mundo de possibilidades que facilitam o desenvolvimento.</p>
+              <p>A utilização do Material UI foi uma surpresa agradável, onde podemos testar a capacidade de absorver novas tecnologias.</p>
               
             </>,
-              tecs: [htmlicon, cssicon, jsicon, dockericon, psqlicon],
+              tecs: [reacticon, htmlicon, cssicon, jsicon, dockericon, psqlicon],
             },
+        
       ];
     
     return (

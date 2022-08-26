@@ -78,6 +78,10 @@ export const ProjetosDiv = styled.div`
     padding: 5px;
   }
 
+  .textos {
+    width: 95%;
+  }
+
   @keyframes down-break {
     from {
       height: 0px;
@@ -141,11 +145,13 @@ export const ProjetosDiv = styled.div`
     section {
       padding: 0;
       max-width: 1000px;
+      height: 650px;
       display: flex;
       flex-direction: row;
       align-items: flex-start;
       flex-direction: row;
       margin-top: 70px;
+      overflow: hidden;
     }
 
     h2 {
@@ -154,11 +160,27 @@ export const ProjetosDiv = styled.div`
 
     .cards {
       width: 60%;
+      height: 85%;
       margin-top: 60px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       overflow-y: unset;
+      overflow: scroll;
+      justify-content: center;
+
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: blue;
+        border-radius: 20px;
+      }
     }
 
     .dialog {

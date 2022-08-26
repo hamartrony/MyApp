@@ -37,6 +37,7 @@ export const SobreDiv = styled.div`
     font-weight: 900;
     margin-left: 10px;
     color: black;
+    margin-top: 20px;
   }
 
   p {

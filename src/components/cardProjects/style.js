@@ -6,6 +6,7 @@ export const CardsProjDiv = styled.div`
   display: flex;
   justify-content: center;
   padding: 10px 5px 0 5px;
+  margin-bottom: 20px;
 
   .attr {
     width: 140px;
